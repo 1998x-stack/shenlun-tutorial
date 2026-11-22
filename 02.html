@@ -5,12 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.5, user-scalable=yes">
     <title>第02章 · 阅卷规则解密 | 申论精讲</title>
     <link rel="stylesheet" href="theme.css">
+    <style>
+        /* 关键样式回退：即使主题样式未能加载，代码块与表格也不会撑破版面 */
+        pre { max-width: 100%; overflow-x: auto; }
+        table { max-width: 100%; }
+        svg { max-width: 100%; height: auto; }
+    </style>
 </head>
 <body>
+<a class="skip-link" href="#content">跳转至正文</a>
 <div class="double-border">
 <div class="container">
-    <div class="sidebar">
-        <h3>📝 课程目录</h3>
+    <nav class="sidebar" aria-label="课程目录">
+        <p class="toc-title">📝 课程目录</p>
         <ul class="chapter-list">
             <li><a href="01.html">01. 申论是什么</a></li>
             <li><a href="02.html" class="active">02. 阅卷规则解密</a></li>
@@ -41,16 +48,19 @@
             <li><a href="27.html">27. 考场全流程策略</a></li>
             <li><a href="28.html">28. 申论思维与终身成长</a></li>
         </ul>
-    </div>
-    <div class="main-content">
-
-        <h2>第02章 · 阅卷规则解密</h2>
+    </nav>
+    <main id="content" class="main-content">
+    <article>
+        <header class="article-header">
+            <h1>第02章 · 阅卷规则解密</h1>
+            <p class="dek">阅卷现场怎么给分：踩点制与分档制如何叠加，双评复核在什么情况下触发。</p>
+        </header>
 
         <p>大家好，我是你们的讲师。上一章我们从根本上重新认识了申论——它不是什么高深莫测的"写文章"，而是一套有明确规则的"材料信息处理"测试。但我想你心里可能还有一个疑问：说到底，申论到底是怎么评分的？阅卷人手上到底有没有一份"标准答案"？</p>
 
         <p>这一章，我们就直接走进阅卷现场，把申论的评分规则翻个底朝天。了解了阅卷规则之后，你再去备考，每写一个字都会清楚地知道——这个字能帮你得分，还是只是"自我感动"。很多备考中的"迷之操作"也会豁然开朗。</p>
 
-        <h3>一、一个扎心的故事</h3>
+        <h2>一、一个扎心的故事</h2>
 
         <p>我有个学生叫小林，985高校毕业，参加过国考和省考，两次申论都只有五十多分。她来找我复盘时特别委屈："老师，我每道题都写满了，小题按点答了，大作文结构完整、观点明确，为什么就是过不了65？"</p>
 
@@ -64,7 +74,7 @@
             <strong>核心认知：</strong>申论阅卷本质上是一场"关键词匹配游戏"。不了解规则就上场，就像蒙着眼睛打靶——打得再用力也打不中靶心。
         </div>
 
-        <h3>二、踩点制与分档制</h3>
+        <h2>二、踩点制与分档制</h2>
 
         <p>申论阅卷针对不同的题型，采用两种截然不同的评分方式。</p>
 
@@ -120,7 +130,36 @@
 
         <p>注意一类文和二类文之间差了8分——这在申论里是决定能否进面的关键差距。决定你进入一类还是二类的核心因素不是语言华丽程度，而是"立意"和"观点"。换句话说，大作文的决胜点在"想什么"，而不是"怎么写"。</p>
 
-        <h3>三、双评复核机制</h3>
+        <figure class="figure-pipeline">
+            <div class="figure-scroll">
+            <svg role="img" viewBox="0 0 860 300" aria-labelledby="c02-fig-title c02-fig-desc" font-family="system-ui, 'PingFang SC', 'Microsoft YaHei', sans-serif">
+                <title id="c02-fig-title">小题得分的三步链路与双评复核</title>
+                <desc id="c02-fig-desc">小题得分依次经过三步：命题阶段把材料写成若干评分要点；阅卷阶段在考生答案里扫描要点关键词；最后按命中要点数乘以每点分值赋分。下方表示双评机制：两位阅卷人独立评分，误差不超过正负三分时取平均，超出则交组长仲裁。</desc>
+                <defs><marker id="c02-ar" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#9a8a78"/></marker></defs>
+                <rect x="30" y="60" width="250" height="128" rx="14" fill="#eef6f5" stroke="#147f80" stroke-width="1.6"/>
+                <text x="155" y="92" text-anchor="middle" font-size="16" font-weight="700" fill="#0f5f60">① 命题阶段</text>
+                <text x="155" y="124" text-anchor="middle" font-size="13.5" fill="#2b3a3d">把材料拆成若干评分要点</text>
+                <text x="155" y="148" text-anchor="middle" font-size="13.5" fill="#53676d">（示例：10 分题设 5 个要点）</text>
+                <rect x="305" y="60" width="250" height="128" rx="14" fill="#fdf1ea" stroke="#d06d4d" stroke-width="1.6"/>
+                <text x="430" y="92" text-anchor="middle" font-size="16" font-weight="700" fill="#a8492b">② 阅卷阶段</text>
+                <text x="430" y="124" text-anchor="middle" font-size="13.5" fill="#2b3a3d">在考生答案里扫描关键词</text>
+                <text x="430" y="148" text-anchor="middle" font-size="13.5" fill="#53676d">同义替换 → 匹配不到</text>
+                <rect x="580" y="60" width="250" height="128" rx="14" fill="#f1eefb" stroke="#7461ba" stroke-width="1.6"/>
+                <text x="705" y="92" text-anchor="middle" font-size="16" font-weight="700" fill="#54429a">③ 赋分</text>
+                <text x="705" y="124" text-anchor="middle" font-size="13.5" fill="#2b3a3d">得分 ≈ 命中要点数</text>
+                <text x="705" y="148" text-anchor="middle" font-size="13.5" fill="#2b3a3d">× 每点分值</text>
+                <line x1="282" y1="124" x2="303" y2="124" stroke="#9a8a78" stroke-width="2.5" marker-end="url(#c02-ar)"/>
+                <line x1="557" y1="124" x2="578" y2="124" stroke="#9a8a78" stroke-width="2.5" marker-end="url(#c02-ar)"/>
+                <rect x="30" y="214" width="800" height="56" rx="12" fill="#fff7ed" stroke="#fed7aa"/>
+                <text x="50" y="248" font-size="14" fill="#7c2d12">双评复核：两位阅卷人独立评分 → 误差 ≤ ±3 分取平均；超出 ±3 分交组长仲裁。</text>
+            </svg>
+            </div>
+            <figcaption>图 1：小题得分不是"印象分"，而是"用要点数×每点分值"算出来的：同义替换会直接切断第二步的关键词匹配，所以写得多不等于写得到点。下方一条是双评复核流程。</figcaption>
+        </figure>
+
+        <p class="note">注：本节的分档区间、"10 分题设 5 个要点、每点 2 分"与双评误差阈值均属常见做法的教学示意，不同省份、不同年度的评分细则可能不同，请以当次考试的评分规范为准。</p>
+
+        <h2>三、双评复核机制</h2>
 
         <p>申论阅卷采用"双评"制度，每道题（包括每篇大作文）都会被随机分配给两位阅卷人独立评分：</p>
 
@@ -135,7 +174,7 @@
             <strong>知已知彼：</strong>双评机制意味着你的大作文至少要"说服"两个独立的阅卷人。那些"有争议"的写法——比如立意偏激、观点剑走偏锋——风险极大。一个阅卷人可能觉得你思维独特有亮点，另一个可能直接归类到四类文。策略很明确：稳健第一，出彩第二。在确保不跑题、不偏激的前提下再追求亮点。
         </div>
 
-        <h3>四、评分要点清单深度解剖</h3>
+        <h2>四、评分要点清单深度解剖</h2>
 
         <p>每个阅卷人在正式阅卷前都会接受系统培训，培训的核心内容就是"评分要点清单"。这份清单在实际阅卷时贴在阅卷人的电脑屏幕旁边，或显示在阅卷系统的侧边栏。阅卷人每看一份答案，视线都在这个清单和你答案的关键词之间来回扫视。</p>
 
@@ -176,7 +215,19 @@
 
         <p>看出差别了吗？考生A的回答虽然每个要点都"意思差不多"，但全都换成了一种"大白话"表述。阅卷人在屏幕上一扫而过时，根本找不到关键词的匹配项。而考生B的回答几乎就是标准答案的"官方表述"，阅卷人一眼就能看到踩分点，分数自然不一样。记住：在申论小题里，"准确"比"生动"重要一百倍。</p>
 
-        <h3>五、阅卷速度与应对策略</h3>
+        <section class="widget" aria-labelledby="w2-title">
+            <p class="widget-title" id="w2-title"><strong>动手试一下：</strong>同一份材料，把“同义替换”换成“关键词”，命中数会怎么变？</p>
+            <div class="widget-buttons" role="group" aria-label="切换答法示例">
+                <button type="button" class="demo-btn" data-view="swap" aria-pressed="true">看“同义替换”答法</button>
+                <button type="button" class="demo-btn" data-view="keyword" aria-pressed="false">看“关键词”答法</button>
+            </div>
+            <p class="widget-output" id="w2-out" aria-live="polite">一是工作方式太简单粗暴；二是老百姓不配合；三是基层干部太忙；四是有啥事不跟大家说；五是留不住人。→ 命中要点：约 0/5，估算得分约 4-5 分。（教学示意）</p>
+            <template data-text-swap>一是工作方式太简单粗暴；二是老百姓不配合；三是基层干部太忙；四是有啥事不跟大家说；五是留不住人。→ 命中要点：约 0/5，估算得分约 4-5 分。（教学示意）</template>
+            <template data-text-keyword>① 治理手段单一，过度依赖行政命令；② 群众参与度低，缺乏协商机制；③ 基层负担重，形式主义突出；④ 信息公开不足，透明度低；⑤ 基层人才流失，队伍建设薄弱。→ 命中要点：5/5，估算得分约 9-10 分。（教学示意）</template>
+            <p class="note">两种答法均为示范拟写，得分区间为教学估算，不代表真题参考答案或官方评分。</p>
+        </section>
+
+        <h2>五、阅卷速度与应对策略</h2>
 
         <p>接下来我要说一个你可能不太愿意相信的事实：一篇大作文，阅卷人平均只用45秒到1分钟。小题更短——一道10分的小题只需要15-20秒。</p>
 
@@ -195,19 +246,38 @@
             <strong>血的教训：</strong>每年都有大量考生因为"不分条列点""段落混乱""字迹潦草"而在阅卷环节损失惨重。阅卷人没有时间也没有义务去"解读"你的长篇大论。你要做的，是让阅卷人在2秒钟之内找到你的每一个得分点。这就是为什么"分条列点""用小标题概括""关键信息前置"如此重要——你是在帮阅卷人省时间，也是在帮自己拿分。
         </div>
 
-        <h3>六、本章小结</h3>
+        <h2>六、本章小结</h2>
 
         <p>这一章我们全面解密了申论阅卷规则：小题踩点制、大作文分档制、双评复核机制、评分要点清单的具体形式、以及阅卷速度的真实情况。核心就一句话——申论得分的关键不在"写得多好"，而在"写得对不对"。</p>
 
         <p>了解了阅卷规则之后，我们从下一章开始正式进入能力训练环节。首先我们要攻克的就是申论最根本的技能——材料阅读。你以为自己会"读"材料吗？很多人读了跟没读一样。第三章，我们学习一套高效的材料阅读方法论，让你从此读一遍材料就能抓住全部关键信息。下一章见。</p>
 
-        <div class="footer-nav">
+        <nav class="footer-nav" aria-label="章节导航">
             <a href="01.html">← 上一章</a>
             <a href="index.html">📖 返回目录</a>
             <a href="03.html">下一章 →</a>
-        </div>
-    </div>
+        </nav>
+    </article>
+    </main>
 </div>
 </div>
+<script>
+    (function () {
+        Array.prototype.forEach.call(document.querySelectorAll('.widget'), function (widget) {
+            var out = widget.querySelector('.widget-output');
+            var buttons = widget.querySelectorAll('.demo-btn');
+            if (!out || !buttons.length) { return; }
+            Array.prototype.forEach.call(buttons, function (button) {
+                button.addEventListener('click', function () {
+                    var tpl = widget.querySelector('[data-text-' + button.getAttribute('data-view') + ']');
+                    if (tpl) { out.textContent = tpl.textContent; }
+                    Array.prototype.forEach.call(buttons, function (other) {
+                        other.setAttribute('aria-pressed', String(other === button));
+                    });
+                });
+            });
+        });
+    })();
+</script>
 </body>
 </html>
