@@ -5,12 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.5, user-scalable=yes">
     <title>第05章 · 审题破题全流程 | 申论精讲</title>
     <link rel="stylesheet" href="theme.css">
+    <style>
+        /* 关键样式回退：即使主题样式未能加载，代码块与表格也不会撑破版面 */
+        pre { max-width: 100%; overflow-x: auto; }
+        table { max-width: 100%; }
+        svg { max-width: 100%; height: auto; }
+    </style>
 </head>
 <body>
+<a class="skip-link" href="#content">跳转至正文</a>
 <div class="double-border">
 <div class="container">
-    <div class="sidebar">
-        <h3>📝 课程目录</h3>
+    <nav class="sidebar" aria-label="课程目录">
+        <p class="toc-title">📝 课程目录</p>
         <ul class="chapter-list">
             <li><a href="01.html">01. 申论是什么</a></li>
             <li><a href="02.html">02. 阅卷规则解密</a></li>
@@ -41,16 +48,21 @@
             <li><a href="27.html">27. 考场全流程策略</a></li>
             <li><a href="28.html">28. 申论思维与终身成长</a></li>
         </ul>
-    </div>
-    <div class="main-content">
-
-        <h2>第05章 · 审题破题全流程</h2>
+    </nav>
+    <main id="content" class="main-content">
+    <article>
+        <header class="article-header">
+            <h1>第05章 · 审题破题全流程</h1>
+            <p class="dek">题干里藏着答案的形状：六要素拆解题干，特征词速判题型，作答要求里的关键词逐个对上。</p>
+        </header>
 
         <p>大家好，我是你们的讲师。前三章我们学了阅卷规则、材料阅读、概括提炼——这些都是"基础技能"。但有一个问题，如果你从一开始就搞错了方向，这些技能全白费。这个问题就是——审题。</p>
 
         <p>你可能觉得我在小题大做："审题谁不会啊？不就是读一遍题目吗？"不瞒你说，我见过的考生中，至少有30%的失分直接源于审题错误——不是不会答，是答的根本不是题目问的东西。这一章，我们一起来建立一套"永不偏题"的审题系统。</p>
 
-        <h3>一、一个"审题翻车"的真实案例</h3>
+        <p class="note">注："30% 的失分源于审题"为多年教学复盘的粗略经验估算，属教学示意，不是官方统计数据。</p>
+
+        <h2>一、一个"审题翻车"的真实案例</h2>
 
         <p>有一次模考，我出了一个典型的综合分析题，题目是："根据给定资料4，谈谈你对'有温度的执法'的理解。（20分）"</p>
 
@@ -66,7 +78,7 @@
             <strong>核心认知：</strong>审题不是"读题"，而是"拆题"。每个字都可能是一个得分线索。你花了150分钟写答案，如果前3分钟的审题出了问题，那150分钟全是白费。
         </div>
 
-        <h3>二、题干六要素分析法</h3>
+        <h2>二、题干六要素分析法</h2>
 
         <p>我把审题拆解为六个要素，拿到任何一道题，都按这个框架逐一分析：</p>
 
@@ -166,7 +178,7 @@
             </tbody>
         </table>
 
-        <h3>三、题型特征词速判</h3>
+        <h2>三、题型特征词速判</h2>
 
         <p>在考场上你没有太多时间细细琢磨每道题。因此，我教学生一个"30秒速判法"——通过题干中的特征词快速判断题型，然后立刻匹配对应的答题框架。</p>
 
@@ -211,7 +223,39 @@
             <strong>实战技巧：</strong>在考场上，拿到试卷后先用30秒把所有题目的"特征词"圈出来。比如第一题有"归纳"，第二题有"分析"，第三题有"拟写"--你立刻就知道今天要考的是"概括+分析+公文+大作文"的组合。这个过程能让你在动笔前就对整张试卷的"题型分布"心中有数，合理分配时间和精力。
         </div>
 
-        <h3>四、作答要求关键词解读</h3>
+        <figure class="figure-dispatch">
+            <div class="figure-scroll">
+            <svg role="img" viewBox="0 0 860 320" aria-labelledby="c05-fig-title c05-fig-desc" font-family="system-ui, 'PingFang SC', 'Microsoft YaHei', sans-serif">
+                <title id="c05-fig-title">特征词 → 题型 → 答题框架的对应关系</title>
+                <desc id="c05-fig-desc">题干里的动词与特征词决定题型，题型决定答题框架。归纳、概括类对应分条要点；理解、分析、评价类对应是什么与为什么；建议、措施、对策类对应问题与对策一一对应。图中三行自上而下展示这三条对应链。</desc>
+                <defs><marker id="c05-ar" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#9a8a78"/></marker></defs>
+                <text x="40" y="44" font-size="14" font-weight="700" fill="#7c2d12">题干特征词</text>
+                <text x="320" y="44" font-size="14" font-weight="700" fill="#7c2d12">题型</text>
+                <text x="600" y="44" font-size="14" font-weight="700" fill="#7c2d12">答题框架</text>
+                <g font-size="14" fill="#223a3c">
+                    <rect x="40" y="60" width="220" height="48" rx="10" fill="#eef6f5" stroke="#9ccdca"/><text x="150" y="90" text-anchor="middle">归纳 / 概括 / 概述</text>
+                    <rect x="320" y="60" width="220" height="48" rx="10" fill="#fff"/><text x="430" y="90" text-anchor="middle">归纳概括题</text>
+                    <rect x="600" y="60" width="220" height="48" rx="10" fill="#fff"/><text x="710" y="90" text-anchor="middle">分条要点，每条一要点</text>
+                    <rect x="40" y="132" width="220" height="48" rx="10" fill="#fdf1ea" stroke="#e8b9a8"/><text x="150" y="162" text-anchor="middle">理解 / 分析 / 评价</text>
+                    <rect x="320" y="132" width="220" height="48" rx="10" fill="#fff"/><text x="430" y="162" text-anchor="middle">综合分析题</text>
+                    <rect x="600" y="132" width="220" height="48" rx="10" fill="#fff"/><text x="710" y="162" text-anchor="middle">是什么 → 为什么</text>
+                    <rect x="40" y="204" width="220" height="48" rx="10" fill="#f1eefb" stroke="#c9bff0"/><text x="150" y="234" text-anchor="middle">建议 / 措施 / 对策</text>
+                    <rect x="320" y="204" width="220" height="48" rx="10" fill="#fff"/><text x="430" y="234" text-anchor="middle">提出对策题</text>
+                    <rect x="600" y="204" width="220" height="48" rx="10" fill="#fff"/><text x="710" y="234" text-anchor="middle">问题 → 对策一一对应</text>
+                </g>
+                <line x1="262" y1="84" x2="318" y2="84" stroke="#9a8a78" stroke-width="2.5" marker-end="url(#c05-ar)"/>
+                <line x1="542" y1="84" x2="598" y2="84" stroke="#9a8a78" stroke-width="2.5" marker-end="url(#c05-ar)"/>
+                <line x1="262" y1="156" x2="318" y2="156" stroke="#9a8a78" stroke-width="2.5" marker-end="url(#c05-ar)"/>
+                <line x1="542" y1="156" x2="598" y2="156" stroke="#9a8a78" stroke-width="2.5" marker-end="url(#c05-ar)"/>
+                <line x1="262" y1="228" x2="318" y2="228" stroke="#9a8a78" stroke-width="2.5" marker-end="url(#c05-ar)"/>
+                <line x1="542" y1="228" x2="598" y2="228" stroke="#9a8a78" stroke-width="2.5" marker-end="url(#c05-ar)"/>
+                <text x="40" y="286" font-size="14" fill="#a8492b">审错特征词 = 答错框架：“谈谈你的理解”要的是“是什么/为什么”，不是“怎么办”。</text>
+            </svg>
+            </div>
+            <figcaption>图 1：把题干特征词当“开关”——它决定题型，题型又决定答题框架。本章开头 8 分的翻车案例，就是在第一列就把“理解”错当成了“对策”。</figcaption>
+        </figure>
+
+        <h2>四、作答要求关键词解读</h2>
 
         <p>很多同学对题目下方的"要求"视而不见，或者看到了也不当回事。我来告诉你这些"要求"背后真正的含义：</p>
 
@@ -226,19 +270,50 @@
             <strong>翻车案例：</strong>有一个学生看到题目要求"不超过300字"，他理解成"至少300字"，拼命凑字数，结果不但超过了字数限制被扣分，还因为凑字数写了很多无关内容，稀释了得分点的密度，反而该拿的分没拿到。记住：不超过就是不能超过，差一个字都不行。申论答题卡的格子是严格限定的，超出部分阅卷系统根本扫不到。
         </div>
 
-        <h3>五、本章小结</h3>
+        <section class="widget" aria-labelledby="w5-title">
+            <p class="widget-title" id="w5-title"><strong>动手试一下：</strong>题目是“谈谈你对‘有温度的执法’的理解”，两种框架的差别在哪？</p>
+            <div class="widget-buttons" role="group" aria-label="切换答题框架">
+                <button type="button" class="demo-btn" data-view="understand" aria-pressed="true">按“理解”搭框架</button>
+                <button type="button" class="demo-btn" data-view="measure" aria-pressed="false">按“对策”搭框架（跑题）</button>
+            </div>
+            <p class="widget-output" id="w5-out" aria-live="polite">① 什么是有温度的执法 → ② 为什么要提倡有温度的执法 → ③ 如何正确理解它的内涵。（对上“谈谈理解”，是“是什么/为什么”框架）</p>
+            <template data-text-understand>① 什么是有温度的执法 → ② 为什么要提倡有温度的执法 → ③ 如何正确理解它的内涵。（对上“谈谈理解”，是“是什么/为什么”框架）</template>
+            <template data-text-measure>① 问题：执法过于刚性 → ② 对策：加强柔性执法、完善裁量标准。（这是“怎么办”框架，与“谈谈理解”不匹配）</template>
+            <p class="note">两种框架均为示范搭架，不代表真题参考答案。</p>
+        </section>
+
+        <h2>五、本章小结</h2>
 
         <p>这一章我们建立了一套完整的审题破题体系：六要素分析法（作答任务、作答范围、作答对象、身份限定、字数要求、特殊要求），题型特征词速判法（通过特征词30秒锁定题型和答题框架），以及作答要求关键词的深度解读。审题这件事，说难不难，说简单也不简单——它考的不是能力，而是习惯。养成"逐字拆题"的习惯，你至少能避免30%的无效失分。</p>
 
         <p>下一章，我们要解决一个很多考生的痛点：明明找到了材料中的关键信息，也知道题目问的是什么，但就是"写不出来"——或者说写出来的答案"不够申论"。第六章，我们建立一套"规范表达体系"，让你从"大白话"到"申论语"一步到位。下一章见。</p>
 
-        <div class="footer-nav">
+        <nav class="footer-nav" aria-label="章节导航">
             <a href="04.html">← 上一章</a>
             <a href="index.html">📖 返回目录</a>
             <a href="06.html">下一章 →</a>
-        </div>
-    </div>
+        </nav>
+    </article>
+    </main>
 </div>
 </div>
+<script>
+    (function () {
+        Array.prototype.forEach.call(document.querySelectorAll('.widget'), function (widget) {
+            var out = widget.querySelector('.widget-output');
+            var buttons = widget.querySelectorAll('.demo-btn');
+            if (!out || !buttons.length) { return; }
+            Array.prototype.forEach.call(buttons, function (button) {
+                button.addEventListener('click', function () {
+                    var tpl = widget.querySelector('[data-text-' + button.getAttribute('data-view') + ']');
+                    if (tpl) { out.textContent = tpl.textContent; }
+                    Array.prototype.forEach.call(buttons, function (other) {
+                        other.setAttribute('aria-pressed', String(other === button));
+                    });
+                });
+            });
+        });
+    })();
+</script>
 </body>
 </html>
