@@ -7,10 +7,11 @@
     <link rel="stylesheet" href="theme.css">
 </head>
 <body>
+<a class="skip-link" href="#content">跳转至正文</a>
 <div class="double-border">
 <div class="container">
-    <div class="sidebar">
-        <h3>📝 课程目录</h3>
+    <nav class="sidebar" aria-label="课程目录">
+        <p class="toc-title">📝 课程目录</p>
         <ul class="chapter-list">
             <li><a href="01.html" class="active">01. 申论是什么</a></li>
             <li><a href="02.html">02. 阅卷规则解密</a></li>
@@ -41,16 +42,19 @@
             <li><a href="27.html">27. 考场全流程策略</a></li>
             <li><a href="28.html">28. 申论思维与终身成长</a></li>
         </ul>
-    </div>
-    <div class="main-content">
-
-        <h2>第01章 · 申论是什么</h2>
+    </nav>
+    <main id="content" class="main-content">
+    <article>
+        <header class="article-header">
+            <h1>第01章 · 申论是什么</h1>
+            <p class="dek">先弄清申论到底考什么——它不是写作文，而是基于给定材料的阅读理解、逻辑分析与规范表达。</p>
+        </header>
 
         <p>大家好，我是你们的讲师。今天我们正式开始申论备考的第一课。在正式动笔之前，我想先问你一个问题：你觉得申论是什么？</p>
 
         <p>很多人会脱口而出——"申论就是写作文呗"。如果你也这么想，那这第一章就是为你准备的。因为申论根本不是写作文。把申论当作作文来准备的考生，十有八九会在考场上栽跟头。这一章，我们先把"申论到底是什么"这件事彻底讲清楚。</p>
 
-        <h3>一、一个真实的故事</h3>
+        <h2>一、一个真实的故事</h2>
 
         <p>说个我印象特别深的例子。几年前我带过一个学生，985院校毕业，逻辑思维极强，行测复习了三个月，模考稳定在82分以上。他来找我时说："老师，我行测没问题，申论随便学学就行，反正就是写东西嘛。"</p>
 
@@ -64,7 +68,38 @@
             <strong>核心认知：</strong>申论不是考"你会不会写文章"，而是考"你能不能从材料中找到问题、分析问题、解决问题"。它本质上是一道超级大的"阅读理解+逻辑推理+规范表达"综合题。
         </div>
 
-        <h3>二、申论的本质：主观题目的客观化</h3>
+        <figure class="figure-compare">
+            <div class="figure-scroll">
+            <svg role="img" viewBox="0 0 860 340" aria-labelledby="c01-fig-title c01-fig-desc" font-family="system-ui, 'PingFang SC', 'Microsoft YaHei', sans-serif">
+                <title id="c01-fig-title">两种答题姿态：当作文写 vs 当踩点题答</title>
+                <desc id="c01-fig-desc">上行是把申论当作文写的典型路径：自定立意、脱离材料，堆砌辞藻排比，最后不分点作答，阅卷人找不到踩分点。下行是当踩点题的路径：先读题定要素，再从材料里提取踩分点，最后分条作答、逐点对应分值。两条路径材料同为起点，结局相反。</desc>
+                <defs>
+                    <marker id="c01-ar" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#9a8a78"/></marker>
+                </defs>
+                <rect x="20" y="16" width="820" height="146" rx="14" fill="#fdf2f0" stroke="#d06d4d" stroke-width="1.6"/>
+                <text x="40" y="48" font-size="16" font-weight="700" fill="#a8492b">误区：把申论当“作文”写</text>
+                <g font-size="14" fill="#3d2b25">
+                    <rect x="40" y="70" width="200" height="60" rx="10" fill="#fff" stroke="#e8b9a8"/><text x="140" y="106" text-anchor="middle">自定立意、脱离材料</text>
+                    <rect x="290" y="70" width="200" height="60" rx="10" fill="#fff" stroke="#e8b9a8"/><text x="390" y="106" text-anchor="middle">堆砌辞藻与排比</text>
+                    <rect x="540" y="70" width="280" height="60" rx="10" fill="#fff" stroke="#e8b9a8"/><text x="680" y="106" text-anchor="middle">不分点，阅卷人找不到踩分点</text>
+                </g>
+                <line x1="242" y1="100" x2="286" y2="100" stroke="#9a8a78" stroke-width="2.5" marker-end="url(#c01-ar)"/>
+                <line x1="492" y1="100" x2="536" y2="100" stroke="#9a8a78" stroke-width="2.5" marker-end="url(#c01-ar)"/>
+                <rect x="20" y="182" width="820" height="146" rx="14" fill="#eef6f5" stroke="#147f80" stroke-width="1.6"/>
+                <text x="40" y="214" font-size="16" font-weight="700" fill="#0f5f60">正解：把申论当“踩点题”答</text>
+                <g font-size="14" fill="#223a3c">
+                    <rect x="40" y="236" width="200" height="60" rx="10" fill="#fff" stroke="#9ccdca"/><text x="140" y="272" text-anchor="middle">先读题、再定要素</text>
+                    <rect x="290" y="236" width="200" height="60" rx="10" fill="#fff" stroke="#9ccdca"/><text x="390" y="272" text-anchor="middle">从材料里提取踩分点</text>
+                    <rect x="540" y="236" width="280" height="60" rx="10" fill="#fff" stroke="#9ccdca"/><text x="680" y="272" text-anchor="middle">分条作答，逐点对应分值</text>
+                </g>
+                <line x1="242" y1="266" x2="286" y2="266" stroke="#9a8a78" stroke-width="2.5" marker-end="url(#c01-ar)"/>
+                <line x1="492" y1="266" x2="536" y2="266" stroke="#9a8a78" stroke-width="2.5" marker-end="url(#c01-ar)"/>
+            </svg>
+            </div>
+            <figcaption>图 1：两种答题姿态的对照。两条路径的起点都是同一份材料，差别只在中间三个动作——是否回到材料、是否形成要点、是否分条呈现。图中不标具体分值，因为不同题型的踩分点密度不同。</figcaption>
+        </figure>
+
+        <h2>二、申论的本质：主观题目的客观化</h2>
 
         <p>我们从考试设计的角度来理解申论。公务员考试要筛选的是"能干活的人"，而不是"会写文章的人"。一个合格的公务员，需要具备三项核心能力：</p>
 
@@ -83,7 +118,7 @@
 
         <p>注意上面这个公式：材料是根基，离开了材料，再漂亮的文字都是零分。这也是申论和高考作文最本质的区别——高考作文可以天马行空，申论必须"从材料中来，到材料中去"。</p>
 
-        <h3>三、申论与行测的关系</h3>
+        <h2>三、申论与行测的关系</h2>
 
         <p>很多同学会问："老师，行测和申论哪个更重要？"我的答案是：行测是门槛，申论是决胜盘。</p>
 
@@ -131,13 +166,15 @@
             </tbody>
         </table>
 
+        <p class="note">注：上表分数区间为多年教学观察的经验性归纳，属教学示意，不是官方公布的统计数据；个体差异很大，具体分数线以当年度招录公告和进面名单为准。</p>
+
         <p>行测考察的是"智力与熟练度"，可以通过大量刷题快速提高。但行测有天花板——大多数人到75分左右就很难再往上突破了。申论则不同：初始阶段可能只有四五十分，但经过系统训练，完全有机会冲到70甚至80分。从50分提到70分，空间是20分；而行测从70分提到75分，可能要用掉你三倍的精力。</p>
 
         <div class="tip">
             <strong>备考策略建议：</strong>前期（前3个月）以行测为主，快速打基础；中后期（考前3个月）重心转至申论，因为申论提分空间更大、边际效益更高。不要把时间全部砸在行测的"最后一公里"上——那5分不值得你用全部精力去换。
         </div>
 
-        <h3>四、考试大纲深度解读</h3>
+        <h2>四、考试大纲深度解读</h2>
 
         <p>国考申论分为三类试卷：副省级、市地级、行政执法类。很多同学一开始根本不关心自己考哪一类卷子，拿到什么题就做什么题——这是大忌。三类试卷的能力要求完全不同，备考方向也截然不同。</p>
 
@@ -196,7 +233,7 @@
             <strong>常见误区：</strong>很多同学备考时只看国考副省级真题，结果实际报的是行政执法类岗位。执法类试卷要求写的是"执法工作方案""专项整治通知"这类公文，你拿议论文那一套去答，分数自然上不去。方向不对，努力白费。
         </div>
 
-        <h3>五、申论五大题型鸟瞰</h3>
+        <h2>五、申论五大题型鸟瞰</h2>
 
         <p>了解了申论的本质和大纲要求之后，我们来快速浏览一下申论试卷的五大题型。这五类题型覆盖了前面提到的所有能力要求：</p>
 
@@ -225,7 +262,7 @@
 
         <p>这五大题型在整张试卷中按由易到难的顺序排列，形成一个清晰的"能力阶梯"。我们在后续章节会逐一拆解每种题型的解题方法，今天先建立整体认知。</p>
 
-        <h3>六、常见认知误区</h3>
+        <h2>六、常见认知误区</h2>
 
         <p>在多年的教学中，我发现考生对申论的误解非常普遍。以下几个"坑"几乎是每届学生必踩的：</p>
 
@@ -252,23 +289,53 @@
             </li>
         </ul>
 
+        <section class="widget" aria-labelledby="w1-title">
+            <p class="widget-title" id="w1-title"><strong>动手试一下：</strong>同一道题（“概括材料反映的主要问题”），两种答法差在哪？</p>
+            <div class="widget-buttons" role="group" aria-label="切换答法示例">
+                <button type="button" class="demo-btn" data-view="weak" aria-pressed="true">看“作文式”答法</button>
+                <button type="button" class="demo-btn" data-view="strong" aria-pressed="false">看“踩点式”答法</button>
+            </div>
+            <p class="widget-output" id="w1-out" aria-live="polite">我们的城市日新月异，却也伤痕累累；繁华背后，是无数普通人无声的叹息。（辞藻饱满，但没有一个可直接计分的要点）</p>
+            <p class="note">两种答法均为示范拟写，用于对照“要点密度”差异，不代表真题参考答案。</p>
+        </section>
+
         <div class="highlight">
             <strong>一句话总结本章：</strong>申论不是写作文，是基于材料的"阅读理解+逻辑分析+规范表达"综合能力测试。行测决定你能不能进考场，申论决定你能不能上岸。方向对了，努力才有意义。
         </div>
 
-        <h3>七、本章小结与预习</h3>
+        <h2>七、本章小结与预习</h2>
 
         <p>这一章我们完成了三件事：第一，重新定义了申论——它不是写作文，而是"主观题目客观化"的能力测试；第二，理清了申论与行测的关系——行测是门槛，申论是决胜盘；第三，解读了考试大纲，对比了三类试卷的能力差异，并俯瞰了五大题型的全貌。</p>
 
         <p>从这一章开始，你就要彻底抛弃"申论就是写作文"这个错误认知，建立"材料为王、踩点为纲"的新思维。接下来的第二章，我们将走进阅卷现场，揭开一个极少有人知道的秘密——阅卷人到底是怎么给你打分的？相信我，了解了阅卷规则，你至少能少走一半的弯路。我们下一章见。</p>
 
-        <div class="footer-nav">
-            <a href="javascript:void(0)">← 上一章</a>
+        <nav class="footer-nav" aria-label="章节导航">
+            <span class="nav-disabled" aria-disabled="true">← 上一章</span>
             <a href="index.html">📖 返回目录</a>
             <a href="02.html">下一章 →</a>
-        </div>
-    </div>
+        </nav>
+    </article>
+    </main>
 </div>
 </div>
+<script>
+    (function () {
+        var out = document.getElementById('w1-out');
+        if (!out) { return; }
+        var texts = {
+            weak: '我们的城市日新月异，却也伤痕累累；繁华背后，是无数普通人无声的叹息。（辞藻饱满，但没有一个可直接计分的要点）',
+            strong: '问题主要有三点：一是老旧小区改造推进缓慢；二是物业服务缺位、缴费率低；三是居民参与治理的渠道不畅。（每句对应一个可计分要点）'
+        };
+        var buttons = document.querySelectorAll('.widget .demo-btn');
+        Array.prototype.forEach.call(buttons, function (button) {
+            button.addEventListener('click', function () {
+                out.textContent = texts[button.getAttribute('data-view')];
+                Array.prototype.forEach.call(buttons, function (other) {
+                    other.setAttribute('aria-pressed', String(other === button));
+                });
+            });
+        });
+    })();
+</script>
 </body>
 </html>
