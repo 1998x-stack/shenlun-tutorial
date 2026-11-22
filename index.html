@@ -268,20 +268,131 @@
             border-radius: 20px;
             margin: 1rem 0;
         }
+        .skip-link {
+            position: absolute;
+            left: -9999px;
+            top: 0;
+            background: #2b7a4b;
+            color: #fff;
+            padding: 0.6rem 1.2rem;
+            border-radius: 0 0 16px 0;
+            z-index: 100;
+        }
+        .skip-link:focus {
+            left: 0;
+        }
+        .header .sub { margin: 0; }
+        main { display: block; width: 100%; }
+        .overview { margin: 0.5rem 0 1.5rem; }
+        .overview h2, #chapters h2 {
+            color: #1f4d33;
+            font-size: 1.5rem;
+            border-left: 6px solid #f7d44a;
+            padding-left: 0.8rem;
+            margin: 1.5rem 0 0.8rem;
+        }
+        .overview p { line-height: 1.85; color: #1e293b; max-width: 70ch; }
+        .roadmap-figure { margin: 1.2rem 0 0.5rem; }
+        .roadmap-svg { width: 100%; height: auto; display: block; background: #fdfbf4; border-radius: 16px; border: 1px solid #eadfce; }
+        .roadmap-figure figcaption { margin-top: 0.6rem; font-size: 0.9rem; color: #53676d; line-height: 1.7; max-width: 70ch; }
+        .card:focus-within { outline: 3px solid #147f80; outline-offset: 2px; }
+        :focus-visible { outline: 3px solid #147f80; outline-offset: 2px; }
+        @media (prefers-reduced-motion: reduce) {
+            * { transition: none !important; animation: none !important; }
+        }
+        @media print {
+            body { background: #fff; padding: 0; }
+            .container { box-shadow: none; border-radius: 0; }
+            .card { break-inside: avoid; box-shadow: none; }
+            .skip-link { display: none; }
+        }
     </style>
 </head>
 <body>
 <div class="container">
-    <div class="header">
-        <h1><span class="emoji"></span><span class="title-text"></span></h1>
-        <div class="sub"></div>
-    </div>
+    <a class="skip-link" href="#chapters">跳转至章节目录</a>
 
-    <div id="cardContainer" class="course-grid"></div>
+    <header class="header">
+        <h1><span class="emoji">📝</span><span class="title-text">申论体系 · 从入门到精通</span></h1>
+        <p class="sub">📘 28章 实战体系</p>
+    </header>
 
-    <div style="text-align:center;">
-        <div class="footer"></div>
-    </div>
+    <main id="content">
+
+    <section class="overview" aria-labelledby="overview-heading">
+        <h2 id="overview-heading">这套课按什么顺序推进</h2>
+        <p>整套课程分成三个阶段：先用七章建立"材料为王、踩点为纲"的底层认知，再用十一章逐一拆解五大题型，最后十章按卷种差异、素材积累与考场流程收口。每一章都独立成页，可以按顺序精读，也可以就着右侧目录跳读。</p>
+        <figure class="roadmap-figure">
+            <svg class="roadmap-svg" role="img" viewBox="0 0 880 300" aria-labelledby="roadmap-title roadmap-desc">
+                <title id="roadmap-title">申论课程三段式学习路线</title>
+                <desc id="roadmap-desc">课程共 28 章，分三个阶段：第 1—7 章建立材料阅读与评分认知，第 8—18 章逐一突破五大题型，第 19—28 章按报考卷种、素材与时政热点进入实战。箭头表示建议的推进顺序。</desc>
+                <defs>
+                    <marker id="rm-arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+                        <path d="M0,0 L10,5 L0,10 z" fill="#9a8a78"/>
+                    </marker>
+                </defs>
+                <line x1="288" y1="150" x2="312" y2="150" stroke="#9a8a78" stroke-width="3" marker-end="url(#rm-arrow)"/>
+                <line x1="568" y1="150" x2="592" y2="150" stroke="#9a8a78" stroke-width="3" marker-end="url(#rm-arrow)"/>
+                <g font-family="system-ui, 'PingFang SC', 'Microsoft YaHei', sans-serif">
+                    <rect x="40" y="60" width="240" height="180" rx="16" fill="#eef6f5" stroke="#147f80" stroke-width="2"/>
+                    <text x="160" y="98" text-anchor="middle" font-size="18" font-weight="700" fill="#0f5f60">阶段一 · 打认知</text>
+                    <text x="160" y="132" text-anchor="middle" font-size="15" fill="#2b3a3d">第 1—7 章</text>
+                    <text x="160" y="166" text-anchor="middle" font-size="14" fill="#53676d">材料阅读 · 审题破题</text>
+                    <text x="160" y="192" text-anchor="middle" font-size="14" fill="#53676d">评分规则 · 规范表达</text>
+                    <rect x="320" y="60" width="240" height="180" rx="16" fill="#fdf1ea" stroke="#d06d4d" stroke-width="2"/>
+                    <text x="440" y="98" text-anchor="middle" font-size="18" font-weight="700" fill="#a8492b">阶段二 · 攻题型</text>
+                    <text x="440" y="132" text-anchor="middle" font-size="15" fill="#2b3a3d">第 8—18 章</text>
+                    <text x="440" y="166" text-anchor="middle" font-size="14" fill="#53676d">概括 · 分析 · 对策</text>
+                    <text x="440" y="192" text-anchor="middle" font-size="14" fill="#53676d">公文 · 大作文 · 误区</text>
+                    <rect x="600" y="60" width="240" height="180" rx="16" fill="#f1eefb" stroke="#7461ba" stroke-width="2"/>
+                    <text x="720" y="98" text-anchor="middle" font-size="18" font-weight="700" fill="#54429a">阶段三 · 上实战</text>
+                    <text x="720" y="132" text-anchor="middle" font-size="15" fill="#2b3a3d">第 19—28 章</text>
+                    <text x="720" y="166" text-anchor="middle" font-size="14" fill="#53676d">分卷种专项 · 素材</text>
+                    <text x="720" y="192" text-anchor="middle" font-size="14" fill="#53676d">真题复盘 · 考场流程</text>
+                </g>
+            </svg>
+            <figcaption>图 1：课程三段式路线。三个阶段的顺序就是建议的复习顺序——先理解评分逻辑，再练题型，最后按报考卷种和热点素材做实战。</figcaption>
+        </figure>
+    </section>
+
+    <section id="chapters" aria-labelledby="chapters-heading">
+        <h2 id="chapters-heading">章节目录</h2>
+        <nav aria-label="章节目录" id="cardContainer" class="course-grid">
+
+<div class="card"><div class="card-header"><span class="chapter-num">01</span><span class="card-title">申论是什么</span></div><ul class="topic-list"><li>申论的定义与本质</li><li>与行测的关系</li><li>考试大纲解读</li></ul><div class="card-footer"><a href="01.html">开始学习 </a></div></div>
+<div class="card"><div class="card-header"><span class="chapter-num">02</span><span class="card-title">阅卷规则解密</span></div><ul class="topic-list"><li>踩点制与分档制</li><li>双评复核机制</li><li>评分要点清单</li></ul><div class="card-footer"><a href="02.html">开始学习 </a></div></div>
+<div class="card"><div class="card-header"><span class="chapter-num">03</span><span class="card-title">材料阅读方法论</span></div><ul class="topic-list"><li>关键词阅读法</li><li>材料脉络分析法</li><li>首尾句定位法</li></ul><div class="card-footer"><a href="03.html">开始学习 </a></div></div>
+<div class="card"><div class="card-header"><span class="chapter-num">04</span><span class="card-title">概括提炼基本功</span></div><ul class="topic-list"><li>同义替换</li><li>归纳概括</li><li>逻辑重组与语言优化</li></ul><div class="card-footer"><a href="04.html">开始学习 </a></div></div>
+<div class="card"><div class="card-header"><span class="chapter-num">05</span><span class="card-title">审题破题全流程</span></div><ul class="topic-list"><li>题干六要素分析法</li><li>题型特征词速判</li><li>作答要求关键词解读</li></ul><div class="card-footer"><a href="05.html">开始学习 </a></div></div>
+<div class="card"><div class="card-header"><span class="chapter-num">06</span><span class="card-title">规范表达体系</span></div><ul class="topic-list"><li>政策书面语转化</li><li>高频规范词库</li><li>空话套话识别</li></ul><div class="card-footer"><a href="06.html">开始学习 </a></div></div>
+<div class="card"><div class="card-header"><span class="chapter-num">07</span><span class="card-title">卷面与时间管理</span></div><ul class="topic-list"><li>字迹与卷面规范</li><li>180分钟时间分配</li><li>答题节奏与优先级</li></ul><div class="card-footer"><a href="07.html">开始学习 </a></div></div>
+<div class="card"><div class="card-header"><span class="chapter-num">08</span><span class="card-title">归纳概括题（上）</span></div><ul class="topic-list"><li>概括问题/原因/影响</li><li>分层提炼法</li><li>总分结构答案呈现</li></ul><div class="card-footer"><a href="08.html">开始学习 </a></div></div>
+<div class="card"><div class="card-header"><span class="chapter-num">09</span><span class="card-title">归纳概括题（下）</span></div><ul class="topic-list"><li>概括做法/成效/变化</li><li>多材料合并</li><li>特殊要素概括技巧</li></ul><div class="card-footer"><a href="09.html">开始学习 </a></div></div>
+<div class="card"><div class="card-header"><span class="chapter-num">10</span><span class="card-title">综合分析题（上）</span></div><ul class="topic-list"><li>词句理解题</li><li>三段式框架</li><li>高频失分点</li></ul><div class="card-footer"><a href="10.html">开始学习 </a></div></div>
+<div class="card"><div class="card-header"><span class="chapter-num">11</span><span class="card-title">综合分析题（下）</span></div><ul class="topic-list"><li>评价分析题</li><li>启示分析题</li><li>对比分析题</li></ul><div class="card-footer"><a href="11.html">开始学习 </a></div></div>
+<div class="card"><div class="card-header"><span class="chapter-num">12</span><span class="card-title">提出对策题</span></div><ul class="topic-list"><li>对策来源三路径</li><li>落地性要求</li><li>空话对策改写</li></ul><div class="card-footer"><a href="12.html">开始学习 </a></div></div>
+<div class="card"><div class="card-header"><span class="chapter-num">13</span><span class="card-title">贯彻执行/公文写作</span></div><ul class="topic-list"><li>15种常用公文格式</li><li>格式四要素</li><li>情境化写作</li></ul><div class="card-footer"><a href="13.html">开始学习 </a></div></div>
+<div class="card"><div class="card-header"><span class="chapter-num">14</span><span class="card-title">文章写作/大作文</span></div><ul class="topic-list"><li>立意定位法</li><li>策论文vs政论文</li><li>黄金五层论证结构</li></ul><div class="card-footer"><a href="14.html">开始学习 </a></div></div>
+<div class="card"><div class="card-header"><span class="chapter-num">15</span><span class="card-title">立意与论点</span></div><ul class="topic-list"><li>题干点睛法</li><li>材料溯源法</li><li>小切口深分析</li></ul><div class="card-footer"><a href="15.html">开始学习 </a></div></div>
+<div class="card"><div class="card-header"><span class="chapter-num">16</span><span class="card-title">论证与论据</span></div><ul class="topic-list"><li>论证的5种方法</li><li>三段论证模式</li><li>素材嵌入技巧</li></ul><div class="card-footer"><a href="16.html">开始学习 </a></div></div>
+<div class="card"><div class="card-header"><span class="chapter-num">17</span><span class="card-title">语言与修辞</span></div><ul class="topic-list"><li>申论语言的力度与温度</li><li>金句制造方法</li><li>避免过度文学化</li></ul><div class="card-footer"><a href="17.html">开始学习 </a></div></div>
+<div class="card"><div class="card-header"><span class="chapter-num">18</span><span class="card-title">常见写作误区</span></div><ul class="topic-list"><li>12类典型低分作文</li><li>大段摘抄与模板化</li><li>三类文到一类文修改示范</li></ul><div class="card-footer"><a href="18.html">开始学习 </a></div></div>
+<div class="card"><div class="card-header"><span class="chapter-num">19</span><span class="card-title">副省级专项</span></div><ul class="topic-list"><li>综合分析深度训练</li><li>哲学思辨类话题</li><li>历年真题精讲</li></ul><div class="card-footer"><a href="19.html">开始学习 </a></div></div>
+<div class="card"><div class="card-header"><span class="chapter-num">20</span><span class="card-title">市地级专项</span></div><ul class="topic-list"><li>贯彻执行能力强化</li><li>基层治理话题</li><li>历年真题精讲</li></ul><div class="card-footer"><a href="20.html">开始学习 </a></div></div>
+<div class="card"><div class="card-header"><span class="chapter-num">21</span><span class="card-title">行政执法类专项</span></div><ul class="topic-list"><li>依法办事与公共服务</li><li>执法文书写作</li><li>2026新趋势</li></ul><div class="card-footer"><a href="21.html">开始学习 </a></div></div>
+<div class="card"><div class="card-header"><span class="chapter-num">22</span><span class="card-title">省考差异化备考</span></div><ul class="topic-list"><li>各省分卷对比</li><li>本土素材整合</li><li>联考vs独立命题</li></ul><div class="card-footer"><a href="22.html">开始学习 </a></div></div>
+<div class="card"><div class="card-header"><span class="chapter-num">23</span><span class="card-title">五位一体素材体系</span></div><ul class="topic-list"><li>经济/政治/文化/社会/生态</li><li>高频话题金句</li><li>素材记录模板</li></ul><div class="card-footer"><a href="23.html">开始学习 </a></div></div>
+<div class="card"><div class="card-header"><span class="chapter-num">24</span><span class="card-title">2026时政热点深度解析</span></div><ul class="topic-list"><li>新质生产力</li><li>乡村振兴</li><li>十五五规划开局</li></ul><div class="card-footer"><a href="24.html">开始学习 </a></div></div>
+<div class="card"><div class="card-header"><span class="chapter-num">25</span><span class="card-title">素材活学活用</span></div><ul class="topic-list"><li>一材多用</li><li>跨话题迁移</li><li>20个万能案例弹药库</li></ul><div class="card-footer"><a href="25.html">开始学习 </a></div></div>
+<div class="card"><div class="card-header"><span class="chapter-num">26</span><span class="card-title">真题实战方法论</span></div><ul class="topic-list"><li>真题做3-5遍的正确方法</li><li>错题复盘体系</li><li>模拟题vs真题</li></ul><div class="card-footer"><a href="26.html">开始学习 </a></div></div>
+<div class="card"><div class="card-header"><span class="chapter-num">27</span><span class="card-title">考场全流程策略</span></div><ul class="topic-list"><li>倒推法答题顺序</li><li>卡壳应对</li><li>180分钟作战计划</li></ul><div class="card-footer"><a href="27.html">开始学习 </a></div></div>
+<div class="card"><div class="card-header"><span class="chapter-num">28</span><span class="card-title">申论思维与终身成长</span></div><ul class="topic-list"><li>从应试到实务的能力迁移</li><li>长期素材追踪习惯</li><li>终身学习的价值</li></ul><div class="card-footer"><a href="28.html">开始学习 </a></div></div>
+        </nav>
+    </section>
+
+    </main>
+
+    <footer class="footer"><span>28章</span> 实战体系 · 从入门到精通</footer>
 </div>
 
 <script>
@@ -293,6 +404,7 @@
         var footerEl = document.querySelector('.footer');
 
         function showError(msg) {
+            if (container.querySelector('.card')) { return; }
             container.innerHTML = '<div class="state-msg error">' + msg + '</div>';
         }
 
