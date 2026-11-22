@@ -164,6 +164,9 @@ th {
 .widget-buttons { display: flex; flex-wrap: wrap; gap: 0.6rem; margin: 0.4rem 0 0.9rem; }
 .demo-btn[aria-pressed="true"] { background: #ea580c; color: #fff; border-color: #c2410c; }
 .widget-output { margin: 0; padding: 0.8rem 1rem; background: #fff; border-radius: 12px; border: 1px dashed #fed7aa; line-height: 1.8; color: #1e293b; }
+.ts-text { margin-bottom: 0.7rem; }
+.ts-checked .tpl { background: #fee2e2; color: #991b1b; border-radius: 4px; padding: 0 2px; }
+.demo-btn[disabled] { opacity: 0.6; cursor: default; }
 
 /* === Article header & TOC title === */
 .article-header { margin-bottom: 1.4rem; }
