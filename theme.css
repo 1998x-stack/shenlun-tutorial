@@ -158,9 +158,57 @@ th {
 }
 
 /* === Responsive === */
+/* === Semantic layout & overflow containment === */
+main { display: block; }
+.main-content, article { min-width: 0; }
+code { overflow-wrap: anywhere; }
+pre { max-width: 100%; }
+
+/* === Sidebar as sticky table of contents === */
+.sidebar { position: sticky; top: 0; align-self: start; max-height: 100vh; overflow-y: auto; }
+
+/* === Figures & diagrams === */
+figure { margin: 1.8rem 0; }
+figure svg, figure img { display: block; width: 100%; height: auto; }
+.figure-scroll { overflow-x: auto; }
+figcaption { margin-top: 0.6rem; font-size: 0.9rem; line-height: 1.7; color: #57534e; }
+
+/* === Interactive controls (progressive enhancement) === */
+.widget { margin: 1.5rem 0; padding: 16px 18px; border-radius: 16px; background: #fff7ed; border: 1px solid #fed7aa; }
+.widget button, .demo-btn { font: inherit; cursor: pointer; padding: 6px 16px; border-radius: 40px; border: 1px solid #ea580c; background: #fff; color: #9a3412; transition: background .15s, color .15s; }
+.widget button:hover, .demo-btn:hover { background: #ea580c; color: #fff; }
+.widget button[aria-pressed="true"] { background: #ea580c; color: #fff; }
+
+/* === Accessibility === */
+.skip-link { position: absolute; left: -9999px; top: 0; background: #9a3412; color: #fff; padding: 8px 16px; border-radius: 0 0 12px 0; z-index: 100; }
+.skip-link:focus { left: 0; }
+:focus-visible { outline: 3px solid #ea580c; outline-offset: 2px; }
+
+/* === Responsive === */
+@media (max-width: 900px) {
+    .sidebar { position: static; max-height: none; overflow: visible; }
+}
 @media (max-width: 768px) {
     .container { grid-template-columns: 1fr; }
     .sidebar { border-right: none; border-bottom: 2px solid #fed7aa; }
     body { padding: 10px; }
     .main-content { padding: 20px; }
+}
+@media (max-width: 480px) {
+    body { padding: 0; }
+    .double-border { border-radius: 0; border-width: 0; }
+    .main-content { padding: 16px; }
+    h2 { font-size: 1.3rem; }
+}
+
+/* === Motion & print === */
+@media (prefers-reduced-motion: reduce) {
+    * { transition: none !important; animation: none !important; }
+}
+@media print {
+    body { background: #fff; padding: 0; }
+    .sidebar, .skip-link, .widget button { display: none; }
+    .container { display: block; }
+    .double-border { border: none; box-shadow: none; }
+    a { color: #7c2d12; }
 }
