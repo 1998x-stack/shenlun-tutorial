@@ -5,12 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.5, user-scalable=yes">
     <title>第22章 · 省考差异化备考 | 申论精讲</title>
     <link rel="stylesheet" href="theme.css">
+    <style>
+        /* 关键样式回退：主题样式未加载时代码块与表格也不会撑破版面 */
+        pre { max-width: 100%; overflow-x: auto; }
+        table { max-width: 100%; }
+        svg { max-width: 100%; height: auto; }
+    </style>
 </head>
 <body>
+<a class="skip-link" href="#content">跳转至正文</a>
 <div class="double-border">
 <div class="container">
-    <div class="sidebar">
-        <h3>📝 课程目录</h3>
+    <nav class="sidebar" aria-label="课程目录">
+        <p class="toc-title">📝 课程目录</p>
         <ul class="chapter-list">
             <li><a href="01.html">01. 申论是什么</a></li>
             <li><a href="02.html">02. 阅卷规则解密</a></li>
@@ -41,16 +48,19 @@
             <li><a href="27.html">27. 考场全流程策略</a></li>
             <li><a href="28.html">28. 申论思维与终身成长</a></li>
         </ul>
-    </div>
-    <div class="main-content">
-
-        <h2>第22章 · 省考差异化备考</h2>
+    </nav>
+    <main id="content" class="main-content">
+    <article>
+        <header class="article-header">
+            <h1>第22章 · 省考差异化备考</h1>
+            <p class="dek">各省分卷差异、联考与独立命题区别，如何做本土化素材整合。</p>
+        </header>
 
         <p>大家好，我是你们的讲师。从第19章到第21章，我们用了三章的篇幅详细拆解了国考三类试卷的备考策略。但有一个事实我们必须面对——绝大多数同学最终上岸，靠的不是国考而是省考。国考的竞争激烈程度大家都有目共睹，很多岗位报录比几百比一甚至上千比一。相比之下，省考的招录人数更多，岗位选择也更丰富，是绝大多数考生上岸的主阵地。</p>
 
         <p>省考有一个核心特点——"一省一策"。全国31个省市区，申论命题风格、分卷模式、题型偏好、素材方向千差万别。很多同学备考省考时直接照搬国考的经验，结果上了考场才发现"水土不服"。这一章我们就来彻底讲清楚省考差异化备考的方法论。</p>
 
-        <h3>一、一个典型的"水土不服"案例</h3>
+        <h2>一、一个典型的"水土不服"案例</h2>
 
         <p>2024年我带过一个河南的学生。他备考时非常认真，把近五年国考副省级真题全部做了一遍，每套题都认真写了批注和复盘。他觉得"以国考的难度去准备省考，肯定降维打击"。结果河南省考成绩出来，申论55分，他自己都难以置信。</p>
 
@@ -64,7 +74,9 @@
 
         <p>后来我帮他重新梳理了河南省考的命题特点，让他重点读《河南日报》的政务版和河南省政府工作报告，积累本省案例素材。第二次考试，他的申论提高了近15分。</p>
 
-        <h3>二、各省分卷模式全景对比</h3>
+        <p class="note">注：“55分”“提高了近15分”以及示例答案中的“县域GDP同比增长6.8%”“人均可支配收入同比增长7.2%”等数据，均为课堂复盘估算或编写示例，属教学示意，不代表真实成绩或官方统计。</p>
+
+        <h2>二、各省分卷模式全景对比</h2>
 
         <p>省考的分卷模式比国考复杂得多。国考只有三类，而省考每个省都有自己的"玩法"。我整理了主要省份的分卷模式和特色，希望能帮你建立"省考地图"。</p>
 
@@ -143,7 +155,7 @@
 
         <p>从这个表你可以看出几个规律：第一，绝大多数省份都采用了"综合管理类+乡镇类+执法类"的三分模式，和国考思路基本一致；第二，广东、浙江等省份的分卷更细，备考时需要更精准地定位；第三，每个省的命题素材都高度"本土化"——广东必考"百千万工程"，浙江必涉"共同富裕"，山东必有"齐鲁文化"。</p>
 
-        <h3>三、联考和独立命题的区别</h3>
+        <h2>三、联考和独立命题的区别</h2>
 
         <p>省考还有一个重要的区分维度——联考和独立命题。所谓"联考"，是指多个省份在同一天使用同一套或近似同一套试题的考试模式。每年3月左右，全国会有二十多个省份参加联考。但联考≠同一套卷子——它其实是一个"题库共享"模式：联考命题中心出一批题，各省从中选一些，再结合本省实际加一些本土化的题目。</p>
 
@@ -155,7 +167,35 @@
             <strong>联考真题使用技巧：</strong>联考虽然"同题不同省"，但同一套题在不同省份的阅卷标准可能不一样。建议你练习联考题时，重点关注的是"材料分析方法"和"答题思路"，而不是"得分"——因为你在本省的得分标准可能和出题省份不一样。最稳妥的方法还是用本省真题来做模考，用联考题来做单项训练。
         </div>
 
-        <h3>四、2026年省考新趋势</h3>
+用联考题来做单项训练。
+        </div>
+
+        <figure class="figure-exam">
+            <div class="figure-scroll">
+            <svg role="img" viewBox="0 0 860 270" aria-labelledby="c22-fig-title c22-fig-desc" font-family="system-ui, 'PingFang SC', 'Microsoft YaHei', sans-serif">
+                <title id="c22-fig-title">省考的两种命题模式与分卷格局</title>
+                <desc id="c22-fig-desc">上方两种命题模式：联考为多省共享题库、最后一道大题常由各省自主命题；独立命题以广东、江苏、浙江、山东为代表，题型风格各具特色。下方是常见的三分分卷格局：综合管理类、乡镇类、行政执法类。</desc>
+                <text x="40" y="34" font-size="15" font-weight="700" fill="#7c2d12">命题模式 + 分卷格局</text>
+                <rect x="60" y="52" width="340" height="104" rx="12" fill="#eef6f5" stroke="#9ccdca"/>
+                <text x="80" y="80" font-size="14" font-weight="700" fill="#0f766e">联考模式</text>
+                <text x="80" y="106" font-size="12" fill="#57534e">多省共享题库，同日考试</text>
+                <text x="80" y="128" font-size="12" fill="#57534e">最后一大题常由各省自主命题</text>
+                <rect x="460" y="52" width="340" height="104" rx="12" fill="#fdf1ea" stroke="#e8b9a8"/>
+                <text x="480" y="80" font-size="14" font-weight="700" fill="#9a3412">独立命题</text>
+                <text x="480" y="106" font-size="12" fill="#57534e">广东 · 江苏 · 浙江 · 山东等</text>
+                <text x="480" y="128" font-size="12" fill="#57534e">以本省真题为主训练材料</text>
+                <g font-size="12" fill="#223a3c">
+                    <rect x="60" y="184" width="226" height="48" rx="10" fill="#fff" stroke="#d6d3d1"/><text x="173" y="213" text-anchor="middle">综合管理类卷</text>
+                    <rect x="300" y="184" width="226" height="48" rx="10" fill="#fff" stroke="#d6d3d1"/><text x="413" y="213" text-anchor="middle">乡镇类卷</text>
+                    <rect x="540" y="184" width="260" height="48" rx="10" fill="#f1eefb" stroke="#c9bff0"/><text x="670" y="213" text-anchor="middle" font-weight="700" fill="#5b21b6">行政执法类卷</text>
+                </g>
+                <text x="40" y="260" font-size="13" fill="#a8492b">备考第一步：先确认自己报的岗位对应哪一类卷，再决定用什么材料练。</text>
+            </svg>
+            </div>
+            <figcaption>图 1：省考既要判“命题模式”（联考还是独立命题），又要判“分卷格局”（综合/乡镇/执法）。判错任何一层，都会让你用错复习材料。</figcaption>
+        </figure>
+
+        <h2>四、2026年省考新趋势</h2>
 
         <p>2026年省考出现了几个值得关注的变化趋势，备考时一定要重视：</p>
 
@@ -165,7 +205,9 @@
 
         <p><strong>趋势三：命题素材本土化更加突出。 </strong>2026年省考的命题素材出现了非常明显的"本土化"特征——四川省考考了"农民工回引"（取材自四川劳务输出大省的实际）、湖南省考把"秋收起义"的历史融入基层治理的素材中、河南省考围绕"航空港实验区"出题、广东省考则深入聚焦"百县千镇万村高质量发展工程"（简称"百千万工程"）。这意味着你不能只靠"通用素材"走天下了——你考哪个省，就要深入了解哪个省的发展战略和工作重点。</p>
 
-        <h3>五、省考特色真题答案示例</h3>
+        <p class="note">注：本节关于“2026年省考”的三条趋势（分卷精细化、应用文比重上升、素材本土化）及“广东连续三年不考大作文”“浙江C类近两年以应用文为主”等具体描述，无法在仓内找到可核实的官方出处，也未逐省核对真题，均为教学观察与考生反馈的转述，请勿当作官方结论引用；备考前请以目标省份最新招考公告与大纲为准。</p>
+
+        <h2>五、省考特色真题答案示例</h2>
 
         <p>下面以一道2025年广东省考县级卷的真题为例，展示省考作答的特色。题目是："根据材料，就广东省推进'百县千镇万村高质量发展工程'的做法，撰写一份工作简报。"</p>
 
@@ -199,7 +241,7 @@
 
         <p>这份答案的"门道"在于：第一，格式上使用了简报的标准结构——有报头、有分节、有数据支撑；第二，内容上紧扣广东实际——"制造业当家""珠三角与粤东粤西粤北对口协作""美丽圩镇"都是广东特有的政策语言；第三，语言风格符合简报的定位——简明扼要、突出亮点、数据翔实。这就是"适配省考"的典型答案——同样的材料，如果你写的是"加强组织建设、完善制度体系"这类通用表述，阅卷人是不会给你高分的。</p>
 
-        <h3>六、如何针对本省进行素材积累</h3>
+        <h2>六、如何针对本省进行素材积累</h2>
 
         <p>省考素材积累和国考有所不同。国考素材要"广"，省考素材要"深"。我给你一套具体的操作方案：</p>
 
@@ -215,19 +257,52 @@
             <strong>一个重要的时间协调建议：</strong>国考和省考的时间安排通常是——国考11月底笔试，省考集中在次年3-4月（北京、江苏、浙江、山东等独立命题省份在12月）。如果你同时备考国考和省考，建议时间安排为：9-11月以国考为主，12月到考前以省考为主。国考的备考经历不是浪费——经过国考高强度的训练，你的申论基本功已经打牢了，之后只需要针对省考的特点做"差异化调整"即可。切忌"一手抓国考一手抓省考"同时进行——那样会两头都不讨好。
         </div>
 
-        <h3>七、本章小结与过渡</h3>
+        <h2>七、本章小结与过渡</h2>
 
         <p>这一章我们讲了三件事：第一，省考和国考的命题逻辑不同——国考选"国家公务员"，省考选"地方公务员"，素材方向、能力要求都有差异；第二，各省的分卷模式和命题风格千差万别——备考前一定要精准定位自己的省份和试卷类型；第三，针对本省的素材积累有一套系统的方法——政府工作报告、省级党报、政务公众号、本省真题都是最好的素材来源。</p>
 
         <p>说到这里，我们"题型精讲"和"分类备考"两个大模块就全部结束了。从第19章到第22章，我们用一个"四连击"把副省级、市地级、行政执法类、省考四个方向全部覆盖到了。接下来的篇章，我们将进入一个全新的模块——<strong>素材积累与时政热点</strong>。从第23章开始，我们会系统地建设"五位一体"素材体系，深度解析2026年时政热点，并教你如何把素材"活学活用"到答题中。素材不是背了就有用，会用才是王道。下一章我们正式开启素材积累之旅，先从"五位一体"的总体框架讲起。我们下一章见。</p>
+
+        <section class="widget" aria-labelledby="w22-title">
+            <p class="widget-title" id="w22-title"><strong>动手试一下：</strong>不同省份/岗位，复习材料该怎么选？</p>
+            <div class="widget-buttons" role="group" aria-label="选择省份类型">
+                <button type="button" class="demo-btn" data-view="joint" aria-pressed="true">联考省份</button>
+                <button type="button" class="demo-btn" data-view="alone" aria-pressed="false">独立命题省份</button>
+                <button type="button" class="demo-btn" data-view="law" aria-pressed="false">执法类岗位</button>
+            </div>
+            <p class="widget-output" id="w22-out" aria-live="polite">联考省份：以近三到五年联考真题做单项训练，重点练材料分析方法；本省自主命制的最后一道大题要单独准备。</p>
+            <template data-text-joint>联考省份：以近三到五年联考真题做单项训练，重点练材料分析方法；本省自主命制的最后一道大题要单独准备。</template>
+            <template data-text-alone>独立命题省份：以本省真题为主训练材料，国考题只能作辅助；注意本省特色题型（如综合分析、概括的高要求）。</template>
+            <template data-text-law>执法类岗位：以应用文写作为重心，熟悉公开信、工作方案、情况通报、调研报告等文种；同时保留一定的大作文练习。</template>
+            <p class="note">三种备考建议为示范，属教学示意；具体请以目标省份最新公告、大纲和真题为准。</p>
+        </section>
 
         <div class="footer-nav">
             <a href="21.html">← 上一章</a>
             <a href="index.html">📖 返回目录</a>
             <a href="23.html">下一章 →</a>
         </div>
-    </div>
+    </article>
+    </main>
 </div>
 </div>
+<script>
+    (function () {
+        Array.prototype.forEach.call(document.querySelectorAll('.widget'), function (widget) {
+            var out = widget.querySelector('.widget-output');
+            var buttons = widget.querySelectorAll('.demo-btn');
+            if (!out || !buttons.length) { return; }
+            Array.prototype.forEach.call(buttons, function (button) {
+                button.addEventListener('click', function () {
+                    var tpl = widget.querySelector('[data-text-' + button.getAttribute('data-view') + ']');
+                    if (tpl) { out.textContent = tpl.textContent; }
+                    Array.prototype.forEach.call(buttons, function (other) {
+                        other.setAttribute('aria-pressed', String(other === button));
+                    });
+                });
+            });
+        });
+    })();
+</script>
 </body>
 </html>
