@@ -105,6 +105,20 @@
 要素六：特殊要求 → "全面、准确、条理清晰"
    ↓ "全面"=要点不可遗漏；"准确"=关键词不可替换；"条理清晰"=分条作答</code></pre>
 
+        <section class="widget" aria-labelledby="w5b-title">
+            <p class="widget-title" id="w5b-title"><strong>动手试一下：</strong>把上面那道题按“六要素”自行拆一遍——每确定一个要素，就翻一张牌。</p>
+            <div class="widget-buttons" role="group" aria-label="六要素拆题自查">
+                <button type="button" class="ele-btn" data-ele="0" aria-pressed="false">① 作答任务</button>
+                <button type="button" class="ele-btn" data-ele="1" aria-pressed="false">② 作答范围</button>
+                <button type="button" class="ele-btn" data-ele="2" aria-pressed="false">③ 作答对象</button>
+                <button type="button" class="ele-btn" data-ele="3" aria-pressed="false">④ 身份限定</button>
+                <button type="button" class="ele-btn" data-ele="4" aria-pressed="false">⑤ 字数要求</button>
+                <button type="button" class="ele-btn" data-ele="5" aria-pressed="false">⑥ 特殊要求</button>
+            </div>
+            <p class="widget-output" id="w5b-out" aria-live="polite">拆题进度：0/6。点上面任意一张牌，翻出该要素的解读。</p>
+            <p class="note">这道题就是本章开头用来演示“翻车”的同一道题；六个要素的解读均直接来自题干，属课堂拆解示范。</p>
+        </section>
+
         <p>这六个要素缺一不可。任何一项解读错误，都可能导致整道题的失分。下面我们逐一展开。</p>
 
         <h4>要素一：作答任务——明确"要你干什么"</h4>
@@ -311,6 +325,33 @@
                         other.setAttribute('aria-pressed', String(other === button));
                     });
                 });
+            });
+        });
+    })();
+
+    (function () {
+        var out = document.getElementById('w5b-out');
+        if (!out) { return; }
+        var els = [
+            '作答任务：两个任务——先“归纳概括成就”，再“提出建议”；很多人只看到一个。',
+            '作答范围：给定资料 2—3，只读这两则，不越界。',
+            '作答对象：我国数字经济领域（不是“全球”，也不是“传统经济”）。',
+            '身份限定：无明显身份限定，默认政府视角、官方口吻。',
+            '字数要求：不超过 500 字；两问共 500 字，每问约 250 字。',
+            '特殊要求：全面、准确、条理清晰——分别对应不漏点、关键词贴材料、分条作答。'
+        ];
+        var buttons = document.querySelectorAll('.ele-btn');
+        var found = [];
+        Array.prototype.forEach.call(buttons, function (button) {
+            button.addEventListener('click', function () {
+                var i = Number(button.getAttribute('data-ele'));
+                button.setAttribute('aria-pressed', 'true');
+                button.disabled = true;
+                found[i] = els[i];
+                var lines = [];
+                for (var k = 0; k < 6; k++) { lines.push('<span class="ele-line">' + (found[k] ? '✔ ' + found[k] : '○ 待拆解') + '</span>'); }
+                var done = found.filter(Boolean).length;
+                out.innerHTML = '拆题进度：' + done + '/6。' + (done === 6 ? ' 六要素齐全——这道题可以动笔了。' : '') + '<br>' + lines.join('<br>');
             });
         });
     })();
