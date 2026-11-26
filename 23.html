@@ -10,6 +10,11 @@
         pre { max-width: 100%; overflow-x: auto; }
         table { max-width: 100%; }
         svg { max-width: 100%; height: auto; }
+        .card-form { display: grid; gap: 0.55rem; margin: 0.6rem 0 1rem; }
+        .card-form label { display: grid; gap: 0.25rem; font-size: 0.9rem; color: #57534e; }
+        .card-form input, .card-form select { font: inherit; padding: 0.45rem 0.6rem; border-radius: 10px; border: 1px solid #fed7aa; background: #fff; color: #1e293b; width: 100%; }
+        .card-form input:focus, .card-form select:focus { outline: 3px solid #ea580c; outline-offset: 1px; }
+        #cf-out { white-space: pre-line; }
     </style>
 </head>
 <body>
@@ -400,6 +405,24 @@
 │                                                   │
 └───────────────────────────────────────────────────┘</code></pre>
 
+        <section class="widget" aria-labelledby="w23b-title">
+            <p class="widget-title" id="w23b-title"><strong>动手试一下：</strong>素材卡实时生成器——把空填上，下面这张卡会同步生成。</p>
+            <div class="card-form">
+                <label>所属领域
+                    <select id="cf-field">
+                        <option>经济</option><option>政治</option><option>文化</option><option selected>社会</option><option>生态</option>
+                    </select>
+                </label>
+                <label>适用话题 <input type="text" id="cf-topic" value="基层治理"></label>
+                <label>核心观点（一句话） <input type="text" id="cf-view" value="基层治理的成效，取决于居民参与渠道是否畅通。"></label>
+                <label>典型案例（2—3 句） <input type="text" id="cf-case" placeholder="写清时间、地点、来龙去脉"></label>
+                <label>权威数据（须核实） <input type="text" id="cf-data" placeholder="无权威来源可留空，不要编造数字"></label>
+                <label>可论证的角度 <input type="text" id="cf-angle" value="论证“共建共治共享的社会治理格局”"></label>
+            </div>
+            <p class="widget-output" id="cf-out" aria-live="polite"></p>
+            <p class="note">卡内默认为示范文本，“权威数据”一栏留空时预览显示“（未填）”——数据务必核实到权威公开发布后再引用。</p>
+        </section>
+
         <p>我强烈建议你准备30-50张这样的素材卡（纸质或电子版都可以）。每张卡控制在200字以内，只记最精华的信息。每周拿出来翻一遍，一个月之后你会发现——看到任何一个申论主题，脑子里自动就会弹出3-5条相关素材。这就是"体系化积累"的力量。</p>
 
         <div class="highlight">
@@ -452,6 +475,26 @@
                 });
             });
         });
+    })();
+
+    (function () {
+        var out = document.getElementById('cf-out');
+        if (!out) { return; }
+        var ids = ['cf-field', 'cf-topic', 'cf-view', 'cf-case', 'cf-data', 'cf-angle'];
+        var labels = ['所属领域', '适用话题', '核心观点', '典型案例', '权威数据', '可论证的角度'];
+        var nodes = ids.map(function (id) { return document.getElementById(id); });
+        function val(n) { return (n && n.value ? n.value.trim() : '') || '（未填）'; }
+        function render() {
+            var lines = ['【素材卡】'];
+            for (var i = 0; i < nodes.length; i++) { lines.push(labels[i] + '：' + val(nodes[i])); }
+            out.textContent = lines.join('\n');
+        }
+        Array.prototype.forEach.call(nodes, function (n) {
+            if (!n) { return; }
+            n.addEventListener('input', render);
+            n.addEventListener('change', render);
+        });
+        render();
     })();
 </script>
 </body>
