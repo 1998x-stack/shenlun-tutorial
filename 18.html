@@ -229,7 +229,7 @@
 一定优势，但在高端芯片、工业软件等关键环节仍受制于人。以华为为例，
 其海思芯片研发历经15年、累计投入超过2400亿元，才在高端市场
 占据一席之地。这深刻说明，关键核心技术是要不来、买不来、讨不来的，
-必须依靠自主创新。建议进一步加大基础研究投入，将R&D经费中
+必须依靠自主创新。建议进一步加大基础研究投入，将R&amp;D经费中
 基础研究占比从目前的7%提升至15%以上，同时完善"揭榜挂帅"
 机制，让更多创新主体参与核心技术攻关。
 
@@ -286,6 +286,17 @@
             </div>
             <figcaption>图 1：三类文与一类文的差距不在“谁更华丽”，而在四个可检验的维度。分数区间为教学估值，仅用于比较量级。</figcaption>
         </figure>
+
+        <section class="widget" aria-labelledby="w18b-title">
+            <p class="widget-title" id="w18b-title"><strong>动手试一下：</strong>三句“万能胶水句”，逐句升级成能计分的具体句。</p>
+            <div class="widget-buttons" role="group" aria-label="胶水句改写升级">
+                <button type="button" class="up-btn" data-i="0" aria-pressed="false">第 1 句 · 看改写</button>
+                <button type="button" class="up-btn" data-i="1" aria-pressed="false">第 2 句 · 看改写</button>
+                <button type="button" class="up-btn" data-i="2" aria-pressed="false">第 3 句 · 看改写</button>
+            </div>
+            <p class="widget-output" id="w18b-out" aria-live="polite"></p>
+            <p class="note">改写句为示范拟写，属教学示意，不代表真题参考答案；引用任何数据前请先核实权威来源。</p>
+        </section>
 
         <h2>四、误区背后的深层逻辑</h2>
 
@@ -348,6 +359,35 @@
             button.disabled = true;
             if (count) { count.textContent = '检测到 6 处万能胶水句（已标红）：它们换成任何话题都成立，所以不承载具体信息。'; }
         });
+    })();
+
+    (function () {
+        var out = document.getElementById('w18b-out');
+        if (!out) { return; }
+        var pairs = [
+            ['随着经济社会的快速发展，我国在各方面都取得了巨大成就。', '以数字经济为例，核心技术创新不足、数据要素流通不畅、区域“数字鸿沟”加深，是当前高质量发展的突出短板。'],
+            ['首先，要加强领导，提高认识。', '建立市级数字经济联席会议机制，由分管副市长牵头，每季度调度一次重点项目进度。'],
+            ['我们要以更加昂扬的斗志、更加务实的作风，推动这项工作取得新成效。', '力争三年内让数据真正“流起来、用起来”，把数据交易与共享从局部试点扩展到全域。']
+        ];
+        var open = [false, false, false];
+        function render() {
+            var rows = [];
+            for (var i = 0; i < pairs.length; i++) {
+                rows.push('<span class="up-row">句 ' + (i + 1) + '：' + pairs[i][0] + (open[i] ? '<br><b>改写：</b>' + pairs[i][1] : '') + '</span>');
+            }
+            out.innerHTML = rows.join('<br>');
+        }
+        var buttons = document.querySelectorAll('.up-btn');
+        Array.prototype.forEach.call(buttons, function (button) {
+            button.addEventListener('click', function () {
+                var i = Number(button.getAttribute('data-i'));
+                open[i] = !open[i];
+                button.setAttribute('aria-pressed', String(open[i]));
+                button.textContent = open[i] ? ('第 ' + (i + 1) + ' 句 · 收起改写') : ('第 ' + (i + 1) + ' 句 · 看改写');
+                render();
+            });
+        });
+        render();
     })();
 </script>
 </body>
