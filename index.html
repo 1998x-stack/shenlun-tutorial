@@ -297,6 +297,16 @@
         .roadmap-figure figcaption { margin-top: 0.6rem; font-size: 0.9rem; color: #53676d; line-height: 1.7; max-width: 70ch; }
         .card:focus-within { outline: 3px solid #147f80; outline-offset: 2px; }
         :focus-visible { outline: 3px solid #147f80; outline-offset: 2px; }
+        .path-picker { margin: 1.5rem 0; padding: 1.1rem 1.3rem; border-radius: 20px; background: #fbf7ec; border: 1px solid #eadfce; }
+        .path-picker .pp-title { margin: 0 0 0.7rem; color: #1f4d33; font-weight: 650; line-height: 1.75; }
+        .path-buttons { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 0.9rem; }
+        .path-buttons button { font: inherit; cursor: pointer; padding: 0.35rem 1rem; border-radius: 40px; border: 1px solid #2b7a4b; background: #fff; color: #1f4d33; transition: background .15s, color .15s; }
+        .path-buttons button:hover { background: #2b7a4b; color: #fff; }
+        .path-buttons button[aria-pressed="true"] { background: #2b7a4b; color: #fff; }
+        .path-output { margin: 0; padding: 0.9rem 1.1rem; background: #fff; border-radius: 14px; border: 1px dashed #cfe0c6; line-height: 1.95; color: #1e293b; }
+        .path-output a { color: #2b7a4b; font-weight: 600; text-decoration: none; border-bottom: 1px solid #b7d8b0; }
+        .path-output a:hover { border-bottom-color: #2b7a4b; }
+        .path-note { margin: 0.7rem 0 0; font-size: 0.85rem; color: #5f7f66; line-height: 1.7; }
         @media (prefers-reduced-motion: reduce) {
             * { transition: none !important; animation: none !important; }
         }
@@ -353,6 +363,19 @@
             </svg>
             <figcaption>图 1：课程三段式路线。三个阶段的顺序就是建议的复习顺序——先理解评分逻辑，再练题型，最后按报考卷种和热点素材做实战。</figcaption>
         </figure>
+    </section>
+
+    <section class="path-picker" aria-labelledby="path-heading">
+        <p class="pp-title" id="path-heading"><strong>先选路线：</strong>你是哪一类考生？点一下，看看这张 28 章的课该从哪几章切入。</p>
+        <div class="path-buttons" role="group" aria-label="选择备考路线">
+            <button type="button" data-path="fresh" aria-pressed="true">零基础起步</button>
+            <button type="button" data-path="province" aria-pressed="false">目标副省级</button>
+            <button type="button" data-path="city" aria-pressed="false">目标市地级</button>
+            <button type="button" data-path="law" aria-pressed="false">目标行政执法类</button>
+            <button type="button" data-path="sprint" aria-pressed="false">考前 30 天冲刺</button>
+        </div>
+        <p class="path-output" id="path-out" aria-live="polite">零基础起步：按目录顺序推进最稳——<a href="01.html">1—7 章</a>先建立材料阅读、审题与评分认知，<a href="08.html">8—18 章</a>逐一攻破五大题型，<a href="19.html">19—28 章</a>再按卷种、素材与考场流程收口。</p>
+        <p class="path-note">注：路线是按本课程 28 章的编排整理出的建议顺序，属学习规划示意，不是官方考试大纲或必读清单；请结合自己的基础与报考岗位调整。</p>
     </section>
 
     <section id="chapters" aria-labelledby="chapters-heading">
@@ -471,11 +494,33 @@
                 showError('课程数据加载失败: ' + err.message + '。请刷新页面重试。');
             });
     })();
+
+    (function () {
+        var out = document.getElementById('path-out');
+        if (!out) { return; }
+        var routes = {
+            fresh: '零基础起步：按目录顺序推进最稳——<a href="01.html">1—7 章</a>先建立材料阅读、审题与评分认知，<a href="08.html">8—18 章</a>逐一攻破五大题型，<a href="19.html">19—28 章</a>再按卷种、素材与考场流程收口。',
+            province: '目标副省级：<a href="01.html">1—7 章</a>打底 → <a href="08.html">8—18 章</a>攻题型（重点练综合分析与大作文）→ <a href="19.html">第 19 章</a>副省级专项 → <a href="23.html">23—27 章</a>素材、真题与考场流程。',
+            city: '目标市地级：<a href="01.html">1—7 章</a>打底 → <a href="08.html">8—18 章</a>攻题型（重点练贯彻执行与对策）→ <a href="20.html">第 20 章</a>市地级专项 → <a href="23.html">23—27 章</a>素材、真题与考场流程。',
+            law: '目标行政执法类：<a href="01.html">1—7 章</a>打底 → <a href="12.html">12—18 章</a>（对策、公文、大作文）→ <a href="21.html">第 21 章</a>执法类专项 → <a href="25.html">25—27 章</a>素材、真题与考场流程。',
+            sprint: '考前 30 天冲刺：<a href="05.html">第 5 章</a>审题定调 → <a href="11.html">11—12 章</a>分析与对策 → <a href="14.html">14—16 章</a>大作文立意与论证 → <a href="18.html">第 18 章</a>改错 → <a href="26.html">26—27 章</a>真题复盘与考场时间分配。'
+        };
+        var buttons = document.querySelectorAll('.path-picker .path-buttons button');
+        Array.prototype.forEach.call(buttons, function (button) {
+            button.addEventListener('click', function () {
+                var key = button.getAttribute('data-path');
+                if (routes[key]) { out.innerHTML = routes[key]; }
+                Array.prototype.forEach.call(buttons, function (other) {
+                    other.setAttribute('aria-pressed', String(other === button));
+                });
+            });
+        });
+    })();
 </script>
 
 <noscript>
     <div style="background:#fcf0d9; padding:1rem; border-radius:20px; text-align:center; color:#92400e;">
-        请启用 JavaScript 以浏览课程目录。
+        已显示静态目录；启用 JavaScript 可获得“备考路线选择”等增强功能。
     </div>
 </noscript>
 </body>
